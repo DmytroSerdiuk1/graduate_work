@@ -17,7 +17,7 @@
         color: #fff;
     }
 
-    .slide-1 {
+    .swiper-slide {
         background: #000;
     }
 
@@ -26,7 +26,7 @@
         opacity: 1;
 
         &-active {
-            background: rgb(163, 163, 163);
+            background: rgb(235, 193, 193);
         }
     }
 }

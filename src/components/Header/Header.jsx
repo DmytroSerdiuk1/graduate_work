@@ -26,7 +26,6 @@ class Header extends Component {
         slidesPerView={1}
         mousewheel
         direction="vertical"
-        pagination={{ clickable: true }}
       >
         <SwiperSlide>
           <div className="header-slider slide-1">
