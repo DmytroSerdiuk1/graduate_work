@@ -1,0 +1,11 @@
+.cursor {
+    position: fixed;
+    z-index: 2;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 100px;
+}
+body {
+    cursor: none;
+}
