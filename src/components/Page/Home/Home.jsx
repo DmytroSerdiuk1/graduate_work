@@ -1,11 +1,14 @@
-import React, { Fragment } from 'react'
-import Header from '../../Header';
+import React from 'react'
+import Error from '../../Error/Error'
+import Main from '../../Main'
+import MainCatalog from '../../MainCatalog'
 
 const Home = () => {
     return (
-        <Fragment>
-            <Header/>
-        </Fragment>
+        <Error>
+            <Main/>
+            <MainCatalog/>
+        </Error>
     )
 }
 

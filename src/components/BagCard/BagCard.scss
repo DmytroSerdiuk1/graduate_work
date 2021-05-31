@@ -1,0 +1,63 @@
+.bag-card {
+    margin-bottom: 20px;
+    position: relative;
+    padding: 23px 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+
+    &-img {
+        margin-right: 40px;
+        img {
+            height: 75px;
+        }
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #414141;
+
+        &:hover {
+            color: #1e62b9;
+        }
+    }
+
+    &-price {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #414141;
+    }
+
+    &-tag {
+        font-size: 12px;
+        line-height: 14px;
+        color: #414141;
+        margin-right: 10px;
+    }
+
+    &-values {
+        font-size: 12px;
+        line-height: 14px;
+        color: #9E9E9E;
+    }
+
+    &-delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background: #F9F9F9;
+        padding: 11px;
+    }
+
+    &-center {
+        flex-grow: 1;
+        margin-right: 30px;
+
+        &__bottom {
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,58 +1,60 @@
 import React, { Component } from "react";
-import "./Header.scss";
+import {NavLink} from 'react-router-dom';
+import {Container} from 'react-bootstrap';
 
-import Cursor from '../Cursor';
+import './Header.scss'
 
-import Container from '../Container';
+import logo from '../../img/logo.png';
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-
-// install Swiper modules
-SwiperCore.use([Navigation, Mousewheel, Pagination, Scrollbar, A11y]);
-
+import wishlist from '../../img/wishlist-icon.png';
+import bag from '../../img/bag.png';
+import profile from '../../img/profile-icon.png';
+import menu from '../../img/menu-icon.png';
+import Navigation from "../Navigation";
 
 class Header extends Component {
+  constructor(){
+    super();
+    this.isTrue = false
+  }
+
+  menuClick () {
+    console.log("menu click");
+  }
+
   render() {
-    return <header className="header">
-      <Cursor/>
-      <Swiper
-        spaceBetween={1}
-        slidesPerView={1}
-        mousewheel
-        direction="vertical"
-      >
-        <SwiperSlide>
-          <div className="header-slider slide-1">
-            <Container>
-              <h1>
-                Take your <br/> merch to the <br/> next level
-              </h1>
-            </Container>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="header-slider">
+    const renderBagRound = this.isTrue ? <div className="header-link_round"></div> : null
+    return (
+      <header className="header pt-3 pb-2">
+        <Container>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <button onClick={this.menuClick} className="header-burger d-lg-none mr-3">
+                <img src={menu} alt="" />
+              </button>
+              <NavLink to="/">
+                <img src={logo} alt="" />
+              </NavLink>
+            </div>
 
+            <div className="link-icon d-flex">
+              <NavLink exact className="header-link" to="/wishlist">
+                <img src={wishlist} alt="" />
+              </NavLink>
+              <NavLink exact className="header-link" to="/bag">
+                <img src={bag} alt="" />
+                {renderBagRound}
+              </NavLink>
+              <NavLink exact className="header-link" to="/profile">
+                <img src={profile} alt="" />
+              </NavLink>
+            </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="header-slider">
 
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="header-slider">
-
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </header>;
+          <Navigation/>
+        </Container>
+      </header>
+    );
   }
 }
 

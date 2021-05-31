@@ -1,0 +1,120 @@
+.catalog-card {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+
+    &-wishlist {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &-stock {
+        position: absolute;
+        left: 25px;
+        top: 15px;
+    }
+
+    &-photo {
+        margin-top: 30px;
+        width: 200px;
+        height: 150px;
+        margin-bottom: 50px;
+        object-fit: cover;
+    }
+
+    &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #414141;
+
+        &:hover {
+            color: #1e62b9;
+            text-decoration: underline;
+        }
+    }
+
+    &-tag {
+        margin-top: 8px;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #414141;
+    }
+
+    &-price {
+        margin-top: 9px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #414141
+    }
+
+    &-sise {
+        margin-top: 15px;
+        margin-bottom: 17px;
+
+        &__text {
+            font-size: 12px;
+            line-height: 14px;
+            color: #414141;
+            margin-bottom: 8px;
+        }
+
+        &__uper {
+            font-size: 9px;
+            line-height: 11px;
+            color: #C4C4C4;
+        }
+
+        &__value {
+            margin-top: 8px;
+            font-size: 9px;
+            line-height: 11px;
+            color: #414141;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        background: #245462;
+        color: #fff;
+        padding: 13px;
+        font-size: 13px;
+        line-height: 15px;
+
+        &:hover{
+            transition: .5s;
+            background: rgb(214, 214, 214);
+            color: #000;
+        }
+
+        &:active{
+            transition: 0.3s;
+            background: rgb(70, 70, 70);
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        z-index: 100;
+        transition: .5s;
+        box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.11);
+    }
+
+    &:nth-child(n+5) {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .catalog-card {
+        margin-top: 0 !important;
+    }
+}
