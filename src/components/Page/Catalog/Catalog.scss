@@ -1,0 +1,59 @@
+.catalog {
+    &-left {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+        padding: 20px 20px 30px 20px;
+        display: inline-block;
+        max-height: 500px;
+        max-width: 265px;
+        margin-right: 20px;
+
+        &__title {
+            font-size: 14px;
+            line-height: 16px;
+            color: #414141;
+            margin-bottom: 20px;
+        }
+
+        &__drops {
+            cursor: pointer;
+            display: inline-block;
+            width: 223px;
+            height: 29px;
+            background: #F8F8F8;
+            border-radius: 3px;
+            border: none;
+            padding: 8px 10px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #686868;
+            margin: 5px 0;
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+
+        &__checkbox {
+            font-size: 12px;
+            line-height: 14px;
+            color: #414141;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+
+            label {
+                margin-left: 10px;
+                margin-bottom: 0;
+                cursor: pointer;
+            } 
+
+            input {
+                display: block;
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+}

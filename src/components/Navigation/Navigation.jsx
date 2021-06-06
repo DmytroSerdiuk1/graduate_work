@@ -8,11 +8,15 @@ import livingroom from '../../img/livingroom-icon.png';
 import closet from '../../img/closet-icon.png';
 import office from '../../img/office-icon.png';
 import childrensroom from '../../img/childrensroom-icon.png';
+import { connect } from "react-redux";
+import { ActiveMenu } from '../../actions';
 
 class Navigation extends Component {
   render() {
+    const adaptiveActive = this.props.menuActive ? 'nav-active' : ''
+
     return (
-      <nav className="nav d-flex justify-content-around">
+      <nav className={`nav d-flex justify-content-around ${adaptiveActive}`}>
         <NavLink className="nav-link" to="/catalog/kitchen">
           <img src={kitchen} alt="icon" />
           Кухни
@@ -45,4 +49,15 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+const mapStatetoProps = (state) => {
+  return {
+    menuActive: state.menuActive
+  }
+}
+
+const mapDispatchToProps = {
+  menuActivs: ActiveMenu
+}
+
+
+export default connect(mapStatetoProps, mapDispatchToProps)(Navigation);

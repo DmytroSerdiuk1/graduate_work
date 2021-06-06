@@ -1,25 +1,46 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import { connect } from 'react-redux'
 import BagCard from '../../BagCard'
 
+import './Bag.scss';
 
-const Bag = () => {
+const Bag = ({bagData}) => {
+    console.log(bagData);
+
+    const renderBottom = bagData.length ? (
+        <div className="bag-bottom d-flex justify-content-end">
+            <div className="bag-bottom-wrapper d-flex align-items-center">
+                <p className="bag-price">Итоговая стоимость: <span>69 960₽</span></p>
+                <button className="bag-button">Оформить заказ</button>
+            </div>
+        </div>
+    ) : null;
     return (
+
         <div className="bag">
             <Container>
                 <div className="bag-header d-flex justify-content-between">
                     <p>Ваша корзина</p>
-                    <p><span>4</span> предмета</p>
+                    <p><span>{bagData.length}</span> предмета</p>
                 </div>
                 <div style={{minHeight: "550px"}} className="bag-wrapper mt-2">
-                    <BagCard/>
-                    <BagCard/>
-                    <BagCard/>
-                    <BagCard/>
+                    {
+                        bagData.map(el => {
+                            return <BagCard/>
+                        })
+                    }
                 </div>
+                {renderBottom}
             </Container>
         </div>
     )
 }
 
-export default Bag
+const mapStateToProps = (state) => {
+    return {
+        bagData: state.bag
+    }
+}
+
+export default connect(mapStateToProps)(Bag);

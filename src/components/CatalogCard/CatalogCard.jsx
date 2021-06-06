@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import wishlist from '../../img/wishlist-icon.png';
 import stockicon from '../../img/stock.png';
 
+import { addToCart, addToWishList } from '../../actions';
+import { connect } from "react-redux";
+
 class CatalogCard extends Component {
   constructor(){
     super();
@@ -18,19 +21,18 @@ class CatalogCard extends Component {
   }
 
   render() {
-    const {title, link, price, stock, weightOBJ} = this.props
+    const {title, link, price, stock, weightOBJ, id, AddToWishList, AddToCart, col = 3} = this.props
 
     const renderStock = stock ? (
     <div className="catalog-card-stock d-flex align-items-center">
       <img src={stockicon} alt="" />
       <p className="ml-1">-{stock}%</p>
     </div>) : null;
+
     return(
-      <div className="catalog-card d-flex align-items-center flex-column col-sm-6 col-md-4 col-xl-3">
+      <div className={`catalog-card d-flex align-items-center flex-column col-sm-6 col-md-4 col-xl-${col}`}>
         {renderStock}
-        <button onClick={()=>{
-          console.log(`${link} Is added in wishlist`);
-        }} className='catalog-card-wishlist'>
+        <button onClick={() => AddToWishList(id)} className='catalog-card-wishlist'>
           <img src={wishlist} alt="Add to wishlist" />
         </button>
         <img className="catalog-card-photo" src={tov} alt="" />
@@ -59,16 +61,23 @@ class CatalogCard extends Component {
               </div>
             </div>
           </div>
-          <button onClick={()=>{
-            this.setState({
-              inBag: true
-            })
-            console.log(`${link} is added in bag`);
-          }} className="catalog-card-button">Добавить в корзину</button>
+          <button onClick={() => AddToCart(id)} className="catalog-card-button">Добавить в корзину</button>
         </div>
       </div>
     );
   }
 }
 
-export default CatalogCard;
+const mapStateToProps = (state) => {
+  return {
+    
+  }
+}
+
+const mapDispatchToProps = {
+  AddToCart: addToCart,
+  AddToWishList: addToWishList
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(CatalogCard);

@@ -15,7 +15,7 @@ class BagCard extends Component {
         </div>
         <div className="bag-card-center">
           <div className="bag-card-center__top d-flex justify-content-between">
-            <Link to="/catalog" className="bag-card-title">
+            <Link to="/catalog/product/1" className="bag-card-title">
               Кускен Navy Blue
             </Link>
             <p className='bag-card-price'>16 990₽</p>
