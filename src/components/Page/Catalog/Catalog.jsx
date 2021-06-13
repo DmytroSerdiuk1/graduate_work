@@ -4,10 +4,34 @@ import { Container } from "react-bootstrap";
 import CatalogCard from "../../CatalogCard/CatalogCard";
 import './Catalog.scss'
 
-const arrs = ["Asdasd", "Asdd asd", "asdasdasd", '', '', "", "", ""];
+import Loader from '../../Loader';
+
+import RestoApi from '../../../api';
 
 class Catalog extends Component {
+  constructor(){
+    super();
+    this.state = {
+      cards: [],
+      error: false,
+      loader: false
+    }
+  }
+
+  async componentDidMount(){
+    const value = await new RestoApi().getCards()
+    this.setState({
+      cards: value,
+      error: false,
+      loader: true
+    })
+  }
+
   render() {
+    if(!this.state.loader){
+      return <Loader/>
+    }
+
     return (
       <Container>
         <div className="catalog d-flex">
@@ -53,8 +77,16 @@ class Catalog extends Component {
           </div>
           <div className="catalog-right row">
            {
-              arrs.map((el, i) => {
-                return <CatalogCard key={i} col={4} id={i} title="Валенсия Beige" price={2500} link={`/catalog/product/${i}`} stock={50} weightOBJ={{width: "12", depth: "16", height: "123"}}/>
+              this.state.cards.map((el, i) => {
+                return <CatalogCard 
+                  col="4"
+                  img={el.img}
+                  key={el._id} 
+                  id={el._id} 
+                  title={el.name}
+                  price={el.price} 
+                  stock={el.stock} 
+                  weightOBJ={el.weight}/>
               })
             }
           </div>

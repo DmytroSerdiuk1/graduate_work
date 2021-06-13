@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 
 import remove from '../../img/remove.png';
-import tov from '../../img/tov.png';
 
 import './BagCard.scss';
 
@@ -11,7 +10,7 @@ class BagCard extends Component {
     return (
       <div className="bag-card w-100 d-flex justify-content-between">
         <div className="bag-card-img">
-          <img src={tov} alt="" />
+          <img  alt="" />
         </div>
         <div className="bag-card-center">
           <div className="bag-card-center__top d-flex justify-content-between">

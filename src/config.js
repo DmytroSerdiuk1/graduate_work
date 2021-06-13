@@ -1,4 +1,6 @@
-export default {
+const config = {
     siteName: "Loft",
-    serverApi: ""
+    serverApi: "https://8e2593d93149.ngrok.io/"
 }
+
+export default config

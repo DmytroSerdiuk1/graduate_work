@@ -1,14 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Loader extends Component {
-  render() {
-    return this.props.children;
-  }
+import "./Loader.scss"
+
+const Loader = () => {
+  return (
+    <div className="load-wrapper d-flex align-items-center justify-content-center">
+      <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+  )
 }
 
-const Loader = () => (Component) => {
-
-}
 
 
 export default Loader;

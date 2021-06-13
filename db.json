@@ -1,0 +1,157 @@
+{
+    "cards": [
+        {
+            "_id": "60c60ecc7b2872a5409cc917",
+            "name": "Cross",
+            "img": [
+                "https://loft-mebel.com.ua/702318-large_default/krislo-chelsi-plastik-richman.jpg"
+            ],
+            "stock": 25,
+            "price": 10099,
+            "description": "sint aute qui eu esse commodo aliquip voluptate consectetur laboris et fugiat id est cupidatat id enim consequat consectetur aliqua et dolor enim consectetur elit magna ut velit velit Lorem exercitation pariatur ullamco magna laborum amet sunt culpa exercitation laborum veniam minim tempor qui amet eu ex tempor in pariatur veniam do aliquip dolor Lorem exercitation velit ut sint nisi pariatur et magna minim dolor ut ea consequat consequat commodo consectetur nostrud exercitation ex ut consequat est nulla veniam voluptate eiusmod ad sunt enim consectetur sit tempor proident consequat culpa sint eu laboris excepteur cupidatat esse reprehenderit duis magna eiusmod fugiat cupidatat aliqua duis nulla dolore tempor fugiat veniam id aliqua duis nulla velit exercitation sunt cupidatat sit adipisicing aute aliquip do exercitation nostrud cillum ullamco culpa eiusmod veniam cillum labore laboris esse commodo esse ullamco voluptate magna adipisicing duis exercitation eu eiusmod ipsum pariatur irure est culpa proident incididunt nulla ad exercitation sit incididunt pariatur non excepteur culpa eiusmod ullamco dolore ex do magna aute ipsum proident veniam dolor incididunt sint mollit aliquip minim aute esse nisi reprehenderit ea fugiat quis irure duis irure esse sit minim aliqua ut nisi proident sint irure adipisicing laborum eiusmod veniam exercitation consequat",
+            "tags": [
+                "childrensroom",
+                "bedroom",
+                "livingroom"
+            ],
+            "weight": {
+                "width": 123,
+                "depth": 104,
+                "height": 96
+            }
+        },
+        {
+            "_id": "60c60ecc20659df777abd904",
+            "name": "Hopper",
+            "img": [
+                "https://loft-mebel.com.ua/706254-large_default/krislo-aklas-fidzhi-6109b-chornij.jpg"
+            ],
+            "stock": null,
+            "price": 2300,
+            "description": "exercitation duis mollit consectetur voluptate nulla et incididunt et voluptate sint exercitation pariatur velit cupidatat et labore sint Lorem mollit nulla fugiat nulla excepteur mollit incididunt qui ut eiusmod pariatur et reprehenderit proident commodo cillum duis non adipisicing cupidatat reprehenderit cillum cillum incididunt aliquip voluptate qui voluptate officia nulla nostrud est consectetur tempor velit ex laborum proident labore proident laboris adipisicing amet commodo nisi cillum in fugiat duis consequat pariatur enim minim adipisicing voluptate aliqua duis culpa incididunt dolore dolor cillum exercitation magna anim eiusmod cillum est deserunt nostrud tempor enim magna ullamco velit officia non Lorem in Lorem duis proident mollit amet dolor nulla excepteur labore dolore reprehenderit veniam mollit sint magna exercitation tempor ad irure aliquip id sint laborum eiusmod velit est pariatur commodo consectetur incididunt cupidatat dolor laboris ad consequat non dolor deserunt irure deserunt ea aliquip veniam esse minim voluptate occaecat mollit occaecat irure veniam pariatur dolore sunt ullamco reprehenderit commodo velit deserunt ex ullamco minim culpa irure laboris occaecat cupidatat ea sunt proident aliquip velit amet reprehenderit elit labore laboris quis mollit tempor cillum aliqua eu incididunt in eu elit culpa est pariatur magna culpa aute amet occaecat nisi ad elit do nulla sint voluptate",
+            "tags": [
+                "kitchen",
+                "childrensroom",
+                "office"
+            ],
+            "weight": {
+                "width": 15,
+                "depth": 100,
+                "height": 45
+            }
+        },
+        {
+            "_id": "60c60ecc27c17fdf0e4c0c78",
+            "name": "Colon",
+            "img": [
+                "https://loft-mebel.com.ua/706288-large_default/krislo-aklas-atlant-mp-xy-7147-zelene.jpg"
+            ],
+            "stock": null,
+            "price": 10099,
+            "description": "cupidatat officia consequat dolore non eiusmod nulla est non adipisicing officia mollit tempor laborum qui sint cillum irure Lorem eu enim deserunt excepteur nisi aliquip aute aute incididunt consectetur id non ipsum do esse consectetur adipisicing consectetur esse proident ullamco reprehenderit incididunt elit do nisi exercitation duis aliquip culpa cupidatat non proident aliquip duis ad pariatur mollit qui do consectetur voluptate qui ut sint labore veniam dolor ipsum aute aliquip veniam laborum do sit adipisicing adipisicing mollit esse ut adipisicing minim culpa quis reprehenderit deserunt culpa commodo ullamco ipsum mollit ea laborum proident ut reprehenderit in ipsum sunt veniam laboris voluptate duis consectetur sint mollit minim aute laboris officia excepteur anim ut sunt exercitation voluptate veniam ut excepteur culpa exercitation ipsum labore Lorem occaecat incididunt pariatur velit ullamco culpa tempor proident minim id aute laboris occaecat adipisicing pariatur ipsum occaecat Lorem aliqua laborum ad occaecat irure id labore nulla veniam velit sit aliqua sit elit mollit commodo sint sint proident dolor nulla nostrud non eu laboris nostrud aliquip id non amet ad veniam esse ullamco cupidatat irure aliqua elit consequat ipsum mollit fugiat id qui quis culpa amet do ipsum culpa anim velit exercitation ipsum eiusmod exercitation est ipsum veniam",
+            "tags": [
+                "bedroom"
+            ],
+            "weight": {
+                "width": 32,
+                "depth": 100,
+                "height": 76
+            }
+        },
+        {
+            "_id": "60c60ecc41783923d855dd71",
+            "name": "Zamora",
+            "img": [
+                "https://loft-mebel.com.ua/706276-large_default/krislo-aklas-atlant-mp-xy-7147-bezheve.jpg"
+            ],
+            "stock": 25,
+            "price": 12999,
+            "description": "minim anim anim dolore sint id velit culpa est minim cillum velit aliquip proident ea et esse qui et dolore velit sit aute exercitation velit quis veniam dolor ad exercitation ut velit est laborum do ex quis eiusmod commodo aliqua ex dolore quis deserunt non minim ullamco culpa officia consectetur velit consequat do pariatur nulla eiusmod dolor quis ullamco ea labore pariatur excepteur elit velit nostrud qui nostrud aute proident nisi qui dolor cupidatat ex tempor ea ut sint reprehenderit qui eiusmod elit et consectetur in minim excepteur nisi pariatur minim incididunt sunt ex voluptate commodo et elit officia veniam sunt culpa ad esse magna labore eu sint do dolore mollit ad est et nulla magna fugiat proident mollit laboris consequat velit ea nisi est duis officia do enim exercitation do incididunt magna proident aliqua aute aliqua incididunt adipisicing ullamco excepteur voluptate amet cillum duis laborum dolore Lorem irure fugiat laboris exercitation consequat commodo consequat nostrud dolore proident ullamco in dolor labore quis aliquip laboris magna irure ipsum laborum sint ea sunt proident velit nostrud amet ex do fugiat non et mollit incididunt ex sint adipisicing do magna nulla est ex excepteur aliquip culpa quis nostrud consequat cupidatat anim voluptate",
+            "tags": [
+                "livingroom",
+                "livingroom",
+                "livingroom"
+            ],
+            "weight": {
+                "width": 12,
+                "depth": 400,
+                "height": 76
+            }
+        },
+        {
+            "_id": "60c60ecc61be7f6c57e51ba8",
+            "name": "Mia",
+            "img": [
+                "https://loft-mebel.com.ua/706276-large_default/krislo-aklas-atlant-mp-xy-7147-bezheve.jpg"
+            ],
+            "stock": 25,
+            "price": 10099,
+            "description": "ipsum exercitation consequat duis magna sit elit tempor deserunt veniam nisi pariatur consequat voluptate nisi nostrud consectetur adipisicing aliquip sunt enim eu ad anim quis est officia esse sit nisi in sint fugiat ullamco eiusmod adipisicing adipisicing est cupidatat commodo minim amet sunt minim officia sunt cillum elit minim exercitation aliqua ullamco exercitation non in et non voluptate aliquip eiusmod qui sint minim aute irure qui officia ex est magna id Lorem culpa id qui sint ut excepteur occaecat velit aliqua irure ex proident tempor sint culpa nisi dolor eiusmod nisi minim et officia culpa exercitation non enim officia nulla cupidatat consectetur nisi nisi ad consectetur ut ad exercitation mollit quis duis in esse officia in laborum ex eiusmod qui velit dolore consectetur dolor esse eiusmod sunt qui deserunt adipisicing consectetur sint quis commodo elit incididunt anim pariatur qui voluptate id sint est ea non consectetur nostrud sit reprehenderit aute adipisicing sunt veniam voluptate magna dolor officia consequat Lorem id proident ipsum consequat est est officia magna non et consequat esse mollit consectetur irure consequat excepteur anim eiusmod do aute nisi nostrud commodo id ut proident officia anim eu et adipisicing tempor officia proident officia et nostrud sunt eiusmod minim",
+            "tags": [
+                "childrensroom",
+                "office"
+            ],
+            "weight": {
+                "width": 12,
+                "depth": 400,
+                "height": 89
+            }
+        },
+        {
+            "_id": "60c60ecc1bb04d3eba1eec25",
+            "name": "Goff",
+            "img": [
+                "https://loft-mebel.com.ua/703333-large_default/krislo-dityache-aklas-kevi-ch-tilt-printovoj-rozhevi-bulbashki-.jpg"
+            ],
+            "stock": null,
+            "price": 10099,
+            "description": "incididunt in elit amet consequat magna nulla ut sint irure in irure et veniam dolor exercitation in sit laborum eu est voluptate laboris Lorem exercitation tempor do in ipsum enim velit irure non mollit nisi elit id ea aliquip dolore incididunt laboris dolor aliqua ut occaecat enim duis aliqua elit amet laboris consequat aliqua dolore excepteur do ea nostrud aute sit consequat nostrud velit exercitation occaecat cillum reprehenderit elit sit laboris enim enim est fugiat nulla aute excepteur non id cupidatat do voluptate duis proident id et cillum reprehenderit cupidatat in veniam veniam cupidatat duis cillum amet est tempor cupidatat aute non dolore esse consequat incididunt quis ea commodo qui nisi cupidatat Lorem elit deserunt esse aute non consectetur duis qui nostrud nisi elit eiusmod nostrud aliquip nulla esse ipsum id incididunt deserunt mollit aute ad consequat occaecat dolor exercitation commodo occaecat exercitation veniam ad id ad exercitation deserunt exercitation eu aliquip eiusmod duis nostrud excepteur magna labore nulla sunt eu cillum ipsum commodo velit amet aliquip ea reprehenderit Lorem deserunt enim nostrud aliquip minim ad pariatur magna dolor ullamco non mollit commodo ut occaecat laboris excepteur nostrud tempor est exercitation non occaecat fugiat amet in occaecat ullamco labore nostrud",
+            "tags": [
+                "childrensroom"
+            ],
+            "weight": {
+                "width": 32,
+                "depth": 104,
+                "height": 89
+            }
+        },
+        {
+            "_id": "60c60ecc141eb56e3ea29f1d",
+            "name": "Irene",
+            "img": [
+                "https://loft-mebel.com.ua/706276-large_default/krislo-aklas-atlant-mp-xy-7147-bezheve.jpg"
+            ],
+            "stock": 50,
+            "price": 10099,
+            "description": "enim eiusmod deserunt magna voluptate anim mollit fugiat labore nulla ea culpa irure dolore sunt sint pariatur dolore consequat pariatur minim ipsum anim sunt commodo anim exercitation eu mollit aliquip laboris sit do veniam ut elit enim veniam fugiat dolore amet occaecat nisi adipisicing excepteur commodo nulla sint exercitation officia qui laboris eu dolor do consectetur aliqua nisi sit nostrud cillum reprehenderit nostrud in sunt magna anim sint est nostrud mollit do veniam et tempor id qui aliqua proident laboris nostrud quis nostrud proident veniam sint laboris pariatur laboris consequat mollit do ad fugiat quis ipsum mollit labore aliquip officia sunt incididunt ullamco ut irure anim fugiat ad ut duis aliquip magna adipisicing quis minim eiusmod veniam duis consequat anim elit dolore deserunt laboris sit et commodo et laborum exercitation consectetur ea do non dolore reprehenderit id pariatur pariatur eu Lorem adipisicing ipsum cillum voluptate labore deserunt ex ipsum dolore ea do ex nisi aliqua veniam sint nulla labore aliquip ipsum culpa cillum fugiat dolor aliqua exercitation aliqua qui id occaecat incididunt duis culpa aliquip occaecat adipisicing dolor quis ea elit laboris velit deserunt eu fugiat Lorem voluptate voluptate aute elit in consequat fugiat laboris sit ipsum mollit qui commodo",
+            "tags": [
+                "closet",
+                "kitchen"
+            ],
+            "weight": {
+                "width": 23,
+                "depth": 100,
+                "height": 89
+            }
+        },
+        {
+            "_id": "60c60ecc278ff2ed38c97ecf",
+            "name": "Hudson",
+            "img": [
+                "https://loft-mebel.com.ua/706276-large_default/krislo-aklas-atlant-mp-xy-7147-bezheve.jpg"
+            ],
+            "stock": null,
+            "price": 4600,
+            "description": "aliquip deserunt nulla incididunt ipsum ut ea exercitation labore culpa deserunt sit ullamco qui fugiat laborum magna sit fugiat laboris nostrud exercitation eu sunt in fugiat minim sint fugiat aute id anim sit cupidatat in velit exercitation ullamco consequat incididunt in ex aliquip fugiat nisi excepteur et ut proident ea est magna enim commodo eiusmod incididunt consequat sunt officia officia id et laboris consequat Lorem ullamco tempor anim aliqua officia nisi aute esse duis incididunt do ipsum ipsum cillum qui labore enim sit nostrud consectetur dolore proident eu do excepteur esse tempor exercitation ad Lorem consequat dolor amet magna enim dolore consequat tempor culpa pariatur ex magna voluptate sunt dolor laborum ea consectetur velit consequat aliqua velit cupidatat incididunt ut est veniam sit fugiat qui Lorem officia fugiat Lorem voluptate velit consectetur quis ex elit voluptate laborum proident commodo incididunt deserunt culpa nisi ex eu reprehenderit pariatur cupidatat aliquip sunt duis laborum veniam officia enim officia cillum ea esse dolor ullamco quis ut ipsum occaecat consequat irure pariatur ipsum veniam amet anim veniam esse mollit consectetur aliquip nulla ea proident excepteur occaecat do commodo in commodo nisi anim aliqua culpa magna et ad officia mollit sunt cillum eiusmod consectetur ut",
+            "tags": [
+                "closet",
+                "closet"
+            ],
+            "weight": {
+                "width": 32,
+                "depth": 102,
+                "height": 89
+            }
+        }
+    ]
+}

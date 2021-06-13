@@ -18,35 +18,35 @@ class Footer extends Component {
                 <div className="footer-left-wrapper d-flex">
                   <div className="footer-left-col">
                     <Link className="footer-link" to="">
-                      Кухни
+                      Кухні
                     </Link>
                     <Link className="footer-link" to="">
-                      Спальни
+                      Спальні
                     </Link>
                     <Link className="footer-link" to="">
-                      Гостинные
-                    </Link>
-                  </div>
-                  <div className="footer-left-col">
-                    <Link className="footer-link" to="">
-                      Прихожие
-                    </Link>
-                    <Link className="footer-link" to="">
-                      Офисная мебель
-                    </Link>
-                    <Link className="footer-link" to="">
-                      Детская
+                      Втальні
                     </Link>
                   </div>
                   <div className="footer-left-col">
                     <Link className="footer-link" to="">
-                      Шкафы
+                      Прихожі
                     </Link>
                     <Link className="footer-link" to="">
-                      Матрасы
+                      Офисні меблі
                     </Link>
                     <Link className="footer-link" to="">
-                      Мягкая мебель
+                      Дитяча
+                    </Link>
+                  </div>
+                  <div className="footer-left-col">
+                    <Link className="footer-link" to="">
+                      Шафи
+                    </Link>
+                    <Link className="footer-link" to="">
+                      Матраси
+                    </Link>
+                    <Link className="footer-link" to="">
+                      Мягкі меблі
                     </Link>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ class Footer extends Component {
             <div className="footer-bottom d-flex justify-content-between mt-3">
               <div className="footer-bottom-left d-none d-md-inline-block">
                 <Link className="footer-link  mr-3" to="">
-                  Акция
+                  Акція
                 </Link>
                 <Link className="footer-link" to="">
                   Новинки

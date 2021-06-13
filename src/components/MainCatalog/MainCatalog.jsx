@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import CatalogCard from "../CatalogCard/CatalogCard";
 
-import './MainCatalog.scss'
+import Loader from '../Loader';
 
-const arrs = ["Asdasd", "Asdd asd", "asdasdasd", '', '', "", "", ""];
+import './MainCatalog.scss'
+import WichRestoContext from "../WichRestoContext/WichRestoContext";
 
 class MainCatalog extends Component {
   constructor(){
@@ -12,15 +13,16 @@ class MainCatalog extends Component {
     this.state = {
       cards: [],
       error: false,
-      loader: true
+      loaded: false
     }
   }
 
-  componentDidMount(){
+  async componentDidMount(){
+    const value = await this.props.RestoService.getCards();
     this.setState({
-      cards: arrs,
+      cards: value,
       error: false,
-      loader: false
+      loaded: true
     })
   }
 
@@ -32,14 +34,25 @@ class MainCatalog extends Component {
   }
 
   render() {
+    if(!this.state.loaded){
+      return <Loader/>
+    }
+
     return (
       <section className="catalog">
         <Container>
-          <h6 className="catalog-title">Хиты продаж</h6>
+          <h6 className="catalog-title">Хіти продажу</h6>
           <div className="catalog-wraper row">
             {
               this.state.cards.map((el, i) => {
-                return <CatalogCard key={i} id={i} title="Валенсия Beige" price={2500} link={`/catalog/product/${i}`} stock={50} weightOBJ={{width: "12", depth: "16", height: "123"}}/>
+                return <CatalogCard 
+                  img={el.img}
+                  key={el._id} 
+                  id={el._id} 
+                  title={el.name}
+                  price={el.price} 
+                  stock={el.stock} 
+                  weightOBJ={el.weight}/>
               })
             }
           </div>
@@ -49,4 +62,4 @@ class MainCatalog extends Component {
   }
 }
 
-export default MainCatalog;
+export default WichRestoContext()(MainCatalog);

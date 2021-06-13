@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./CatalogCard.scss"
 
-import tov from '../../img/tov.png';
 import { Link } from "react-router-dom";
 
 import wishlist from '../../img/wishlist-icon.png';
@@ -21,7 +20,7 @@ class CatalogCard extends Component {
   }
 
   render() {
-    const {title, link, price, stock, weightOBJ, id, AddToWishList, AddToCart, col = 3} = this.props
+    const {title, price, stock, weightOBJ, id, AddToWishList, AddToCart, img, col = 3} = this.props
 
     const renderStock = stock ? (
     <div className="catalog-card-stock d-flex align-items-center">
@@ -35,15 +34,15 @@ class CatalogCard extends Component {
         <button onClick={() => AddToWishList(id)} className='catalog-card-wishlist'>
           <img src={wishlist} alt="Add to wishlist" />
         </button>
-        <img className="catalog-card-photo" src={tov} alt="" />
+        <img className="catalog-card-photo" src={img} alt="" />
         <div className="card-text w-100">
-          <Link to={link} className="catalog-card-title">{title}</Link>
-          <p className="catalog-card-tag">Барные стулья</p>
+          <Link to={`/catalog/product/${id}`} className="catalog-card-title">{title}</Link>
+          <p className="catalog-card-tag">Барні стільція</p>
           <div className="catalog-card-price">{Math.floor(price - price * stock / 100)} ₽</div>
         </div>
         <div className="catalog-card-hover w-100">
           <div className="catalog-card-sise">
-            <p className="catalog-card-sise__text">Размеры</p>
+            <p className="catalog-card-sise__text">Розміри</p>
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <p className="catalog-card-sise__uper">ШИРИНА</p>
@@ -51,17 +50,17 @@ class CatalogCard extends Component {
               </div>
               ×
               <div>
-                <p className="catalog-card-sise__uper">ГЛУБИНА</p>
+                <p className="catalog-card-sise__uper">ГЛИБИНА</p>
                 <div className="catalog-card-sise__value">{weightOBJ.depth} СМ</div>
               </div>
               ×
               <div>
-                <p className="catalog-card-sise__uper">ВЫСОТА</p>
+                <p className="catalog-card-sise__uper">ВИСОТА</p>
                 <div className="catalog-card-sise__value">{weightOBJ.height} СМ</div>
               </div>
             </div>
           </div>
-          <button onClick={() => AddToCart(id)} className="catalog-card-button">Добавить в корзину</button>
+          <button onClick={() => AddToCart(id)} className="catalog-card-button">Добити в корзину</button>
         </div>
       </div>
     );

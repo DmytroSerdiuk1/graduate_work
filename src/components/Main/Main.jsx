@@ -22,19 +22,19 @@ class Main extends Component {
       slide: [
         {
           backgroundImageSlide: "http://interiorcom.ru/netcat_files/multifile/2633/spal_nya_02_1.jpg",
-          title: "loft <br /> мебель",
+          title: "loft <br /> меблі",
           titleStyle: {},
-          subtitle: "Современная и удобная мебель в Анапе",
-          linkText: "СМОТРЕТЬ КАТАЛОГ",
+          subtitle: "Сучасна і зручні меблі в Анапі",
+          linkText: "ДИВИТИСЯ КАТАЛОГ",
           linkTo: "/catalog",
           white: true
         },
         {
           backgroundImageSlide: "https://egm.ru/assets/images/dsv/kitchen-set-royce-vanilla-soft-mdf.jpg",
-          title: "loft <br /> мебель",
+          title: "loft <br /> меблі",
           titleStyle: {},
           subtitle: "Современная и удобная мебель в Анапе",
-          linkText: "СМОТРЕТЬ КАТАЛОГ",
+          linkText: "ДИВИТИСЯ КАТАЛОГ",
           linkTo: "/catalog",
           white: false
         }

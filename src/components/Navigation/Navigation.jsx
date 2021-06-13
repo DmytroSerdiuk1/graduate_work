@@ -19,30 +19,30 @@ class Navigation extends Component {
       <nav className={`nav d-flex justify-content-around ${adaptiveActive}`}>
         <NavLink className="nav-link" to="/catalog/kitchen">
           <img src={kitchen} alt="icon" />
-          Кухни
+          Кухні
         </NavLink>
         <NavLink className="nav-link"  to="/catalog/bedroom">
           <img src={bedroom} alt="icon" />
-          Спальни
+          Спальні
         </NavLink>
         <NavLink className="nav-link"  to="/catalog/livingroom">
           <img src={livingroom} alt="icon" />
-          Гостинные
+          Вітальні
         </NavLink>
         <NavLink className="nav-link"  to="/catalog/closet">
           <img src={closet} alt="icon" />
-          Прихожие
+          Прихожі
         </NavLink>
         <NavLink className="nav-link"  to="/catalog/office">
           <img src={office} alt="icon" />
-          Офисная мебель
+          Офісні меблі
         </NavLink>
         <NavLink className="nav-link"  to="/catalog/childrensroom">
           <img src={childrensroom} alt="icon" />
-          Детская
+          Дитяча
         </NavLink>
         <NavLink className="nav-link" to="">
-          Акция
+          Акції
         </NavLink>
       </nav>
     );
