@@ -4,9 +4,15 @@ const ActiveMenu = () => {
     }
 }
 
-const addToCart = (id) => {
+const addToCart = (obj) => {
     return {
         type: 'ADD_TO_CART',
+        payload: obj
+    }
+}
+const removeFromCart = (id) => {
+    return {
+        type: 'REMOVE_FROM_CART',
         productId: id
     }
 }
@@ -18,4 +24,4 @@ const addToWishList = (id) => {
     }
 }
 
-export {ActiveMenu, addToCart, addToWishList}
+export {ActiveMenu, addToCart, addToWishList, removeFromCart}

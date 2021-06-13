@@ -46,13 +46,10 @@ class MainCatalog extends Component {
             {
               this.state.cards.map((el, i) => {
                 return <CatalogCard 
-                  img={el.img}
                   key={el._id} 
                   id={el._id} 
-                  title={el.name}
-                  price={el.price} 
-                  stock={el.stock} 
-                  weightOBJ={el.weight}/>
+                  data={el}
+                />
               })
             }
           </div>

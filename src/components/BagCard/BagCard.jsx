@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
 
 import remove from '../../img/remove.png';
+import {removeFromCart} from '../../actions';
 
 import './BagCard.scss';
 
@@ -10,14 +12,14 @@ class BagCard extends Component {
     return (
       <div className="bag-card w-100 d-flex justify-content-between">
         <div className="bag-card-img">
-          <img  alt="" />
+          <img src={this.props.data.img} alt="" />
         </div>
         <div className="bag-card-center">
           <div className="bag-card-center__top d-flex justify-content-between">
-            <Link to="/catalog/product/1" className="bag-card-title">
-              Кускен Navy Blue
+            <Link to={`/catalog/product/${this.props.id}`} className="bag-card-title">
+              {this.props.data.name}
             </Link>
-            <p className='bag-card-price'>16 990₽</p>
+            <p className='bag-card-price'>{this.props.data.price}₽</p>
           </div>
           <div className="bag-card-center__bottom mt-3 d-flex justify-content-between">
             <div className="bag-card-value d-flex">
@@ -29,18 +31,20 @@ class BagCard extends Component {
                 Размер(Ш×Д×В):
               </p>
               <div className="bag-card-values">
-                <span>218 СМ</span>
+                <span>{this.props.data.weight.width} СМ</span>
                 ×
-                <span>218 СМ</span>
+                <span>{this.props.data.weight.depth} СМ</span>
                 ×
-                <span>218 СМ</span>
+                <span>{this.props.data.weight.height} СМ</span>
               </div>
             </div>
           </div>
         </div>
         <div>
         </div>
-        <button className="bag-card-delete">
+        <button onClick={()=> {
+          this.props.removeCart(this.props.id)
+        }} className="bag-card-delete">
           <img src={remove} alt="" />
         </button>
       </div>
@@ -48,4 +52,14 @@ class BagCard extends Component {
   }
 }
 
-export default BagCard;
+const mapStateToProps = ({bag}) => {
+  return {
+    bag: bag
+  }
+}
+
+const mapDispatchToProps = {
+  removeCart: removeFromCart
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BagCard);

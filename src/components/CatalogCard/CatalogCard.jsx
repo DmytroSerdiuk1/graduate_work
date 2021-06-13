@@ -20,7 +20,8 @@ class CatalogCard extends Component {
   }
 
   render() {
-    const {title, price, stock, weightOBJ, id, AddToWishList, AddToCart, img, col = 3} = this.props
+    const {name, price, stock, weight, img} = this.props.data;
+    const {id, AddToWishList, AddToCart, col = 3} = this.props;
 
     const renderStock = stock ? (
     <div className="catalog-card-stock d-flex align-items-center">
@@ -36,7 +37,7 @@ class CatalogCard extends Component {
         </button>
         <img className="catalog-card-photo" src={img} alt="" />
         <div className="card-text w-100">
-          <Link to={`/catalog/product/${id}`} className="catalog-card-title">{title}</Link>
+          <Link to={`/catalog/product/${id}`} className="catalog-card-title">{name}</Link>
           <p className="catalog-card-tag">Барні стільція</p>
           <div className="catalog-card-price">{Math.floor(price - price * stock / 100)} ₽</div>
         </div>
@@ -46,21 +47,21 @@ class CatalogCard extends Component {
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <p className="catalog-card-sise__uper">ШИРИНА</p>
-                <div className="catalog-card-sise__value ">{weightOBJ.width} СМ</div>
+                <div className="catalog-card-sise__value ">{weight.width} СМ</div>
               </div>
               ×
               <div>
                 <p className="catalog-card-sise__uper">ГЛИБИНА</p>
-                <div className="catalog-card-sise__value">{weightOBJ.depth} СМ</div>
+                <div className="catalog-card-sise__value">{weight.depth} СМ</div>
               </div>
               ×
               <div>
                 <p className="catalog-card-sise__uper">ВИСОТА</p>
-                <div className="catalog-card-sise__value">{weightOBJ.height} СМ</div>
+                <div className="catalog-card-sise__value">{weight.height} СМ</div>
               </div>
             </div>
           </div>
-          <button onClick={() => AddToCart(id)} className="catalog-card-button">Добити в корзину</button>
+          <button onClick={() => AddToCart(this.props.data)} className="catalog-card-button">Добити в корзину</button>
         </div>
       </div>
     );

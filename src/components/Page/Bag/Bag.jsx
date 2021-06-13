@@ -27,7 +27,7 @@ const Bag = ({bagData}) => {
                 <div style={{minHeight: "550px"}} className="bag-wrapper mt-2">
                     {
                         bagData.map(el => {
-                            return <BagCard/>
+                            return <BagCard key={el._id} id={el._id} data={el}/>
                         })
                     }
                 </div>
