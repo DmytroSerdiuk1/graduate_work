@@ -5,8 +5,6 @@ import CatalogCard from "../../CatalogCard/CatalogCard";
 import './Catalog.scss'
 
 import Loader from '../../Loader';
-
-import RestoApi from '../../../api';
 import { connect } from "react-redux";
 
 class Catalog extends Component {
