@@ -4,6 +4,12 @@ const ActiveMenu = () => {
     }
 }
 
+const ExitMenu = () => {
+    return {
+        type: 'EXIT_MENU'
+    }
+}
+
 const addToCart = (obj) => {
     return {
         type: 'ADD_TO_CART',
@@ -18,10 +24,17 @@ const removeFromCart = (id) => {
 }
 
 const addToWishList = (id) => {
+    console.log(id);
     return {
         type: 'TOGGLE_TO_WISHLIST',
         productId: id
     }
 }
+const catalogLoad = (catalog) => {
+    return {
+        type: 'CATALOG_LOAD',
+        catalog: catalog
+    }
+}
 
-export {ActiveMenu, addToCart, addToWishList, removeFromCart}
+export {ActiveMenu, ExitMenu, addToCart, addToWishList, removeFromCart, catalogLoad}

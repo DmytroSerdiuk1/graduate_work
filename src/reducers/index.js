@@ -1,5 +1,7 @@
 const initialState = {
     menuActive: false,
+    catalog: [],
+    catalogLoad: true,
     bag: [],
     wishlist: []
 };
@@ -11,21 +13,39 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 menuActive: !state.menuActive
             }
+        case 'CATALOG_LOAD':
+            return {
+                ...state,
+                catalogLoad: false,
+                catalog: [...action.catalog]
+            }
+        case 'EXIT_MENU':
+            return {
+                ...state,
+                menuActive: !state.menuActive
+            }
         case 'ADD_TO_CART':
             return {
                 ...state,
                 bag: [...state.bag, action.payload]
             }
         case 'TOGGLE_TO_WISHLIST':
+            const catalogWishlsitIndex = state.catalog.findIndex(el => el._id === action.productId);
+            const addedCatalogWishlist = {...state.catalog[catalogWishlsitIndex], wishlist: !state.catalog[catalogWishlsitIndex].wishlist}
+
             if(state.wishlist.indexOf(action.productId) === -1){
                 return {
                     ...state,
+                    catalog: [...state.catalog.slice(0, catalogWishlsitIndex), addedCatalogWishlist, ...state.catalog.slice(catalogWishlsitIndex + 1)],
                     wishlist: [...state.wishlist, action.productId]
                 }
             } else {
+                const deleteIndex = state.wishlist.findIndex((el) => el === action.productId);
+                console.log("delete");
                 return {
                     ...state,
-                    wishlist: [...state.wishlist.splice(0, action.productId), ...state.wishlist.slice(action.productId + 1)]
+                    catalog: [...state.catalog.slice(0, catalogWishlsitIndex), addedCatalogWishlist, ...state.catalog.slice(catalogWishlsitIndex + 1)],
+                    wishlist: [...state.wishlist.slice(0, deleteIndex), ...state.wishlist.slice(deleteIndex + 1)]
                 }
             }
         case 'REMOVE_FROM_CART':

@@ -7,6 +7,7 @@ import './Catalog.scss'
 import Loader from '../../Loader';
 
 import RestoApi from '../../../api';
+import { connect } from "react-redux";
 
 class Catalog extends Component {
   constructor(){
@@ -14,21 +15,28 @@ class Catalog extends Component {
     this.state = {
       cards: [],
       error: false,
-      loader: false
     }
   }
 
   async componentDidMount(){
-    const value = await new RestoApi().getCards()
+
     this.setState({
-      cards: value,
+      cards: this.props.catalog.filter(el => el.tags[0] === this.props.match.params.tag),
       error: false,
-      loader: true
     })
   }
 
+  
+  componentDidUpdate(prevProps) {
+    if (this.props.catalog !== prevProps.catalog ||  this.props.match.params.tag !== prevProps.match.params.tag) {
+      this.setState({
+        cards: this.props.catalog.filter(el => el.tags[0] === this.props.match.params.tag),
+      })
+    }
+  }
+
   render() {
-    if(!this.state.loader){
+    if(this.props.load){
       return <Loader/>
     }
 
@@ -75,7 +83,7 @@ class Catalog extends Component {
               <label htmlFor="vehicle4">Сайле</label>
             </div>
           </div>
-          <div className="catalog-right row">
+          <div className="catalog-right w-100 row">
            {
               this.state.cards.map((el, i) => {
                 return <CatalogCard 
@@ -93,4 +101,6 @@ class Catalog extends Component {
   }
 }
 
-export default Catalog;
+const mapStateToProps = (state) => ({catalog: state.catalog, load: state.catalogLoad})
+
+export default connect(mapStateToProps)(Catalog);

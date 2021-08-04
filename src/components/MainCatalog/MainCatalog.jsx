@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import CatalogCard from "../CatalogCard/CatalogCard";
+import {connect} from "react-redux"
+import {catalogLoad} from "../../actions"
 
 import Loader from '../Loader';
 
 import './MainCatalog.scss'
-import WichRestoContext from "../WichRestoContext/WichRestoContext";
 
 class MainCatalog extends Component {
   constructor(){
@@ -17,12 +18,10 @@ class MainCatalog extends Component {
     }
   }
 
-  async componentDidMount(){
-    const value = await this.props.RestoService.getCards();
+  componentDidMount(){
     this.setState({
-      cards: value,
-      error: false,
-      loaded: true
+      cards: this.props.catalog,
+      error: false
     })
   }
 
@@ -33,8 +32,17 @@ class MainCatalog extends Component {
     })
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.catalog !== prevProps.catalog) {
+      this.setState({
+        cards: this.props.catalog
+      })
+    }
+  }
+
+
   render() {
-    if(!this.state.loaded){
+    if(this.props.load){
       return <Loader/>
     }
 
@@ -59,4 +67,16 @@ class MainCatalog extends Component {
   }
 }
 
-export default WichRestoContext()(MainCatalog);
+const mapStateToProps = (state) => {
+  return {
+    catalog: state.catalog,
+    load: state.catalogLoad
+  }
+}
+
+const mapDispatchToProps = {
+  catalogLoad
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainCatalog);

@@ -20,6 +20,22 @@
         }
     }
 
+    &-exit {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        height: 18px;
+        width: 18px;
+        background: #F0F0F0;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    }
+
+    &-adaptive {
+        display: none;
+    }
 }
 
 @media (max-width: 992px) {
@@ -41,7 +57,9 @@
         &-link {
             border-radius: 0;
             padding: 15px 20px 15px 28px;
-
+            font-size: 13px;
+            line-height: 15px;
+            
             img {
                 width: 17px;
                 height: 14px;
@@ -54,6 +72,10 @@
 
         &-active {
             transform: translateX(0);
+        }
+
+        &-adaptive {
+            display: block;
         }
     }
 }

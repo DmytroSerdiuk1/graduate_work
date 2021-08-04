@@ -7,9 +7,10 @@ import bedroom from '../../img/bedroom-icon.png';
 import livingroom from '../../img/livingroom-icon.png';
 import closet from '../../img/closet-icon.png';
 import office from '../../img/office-icon.png';
+import exit from '../../img/exit-menu.png';
 import childrensroom from '../../img/childrensroom-icon.png';
 import { connect } from "react-redux";
-import { ActiveMenu } from '../../actions';
+import { ExitMenu } from '../../actions';
 
 class Navigation extends Component {
   render() {
@@ -17,6 +18,9 @@ class Navigation extends Component {
 
     return (
       <nav className={`nav d-flex justify-content-around ${adaptiveActive}`}>
+        <button onClick={this.props.exitMenu} className="nav-exit nav-adaptive">
+          <img src={exit} alt="exit" />
+        </button>
         <NavLink className="nav-link" to="/catalog/kitchen">
           <img src={kitchen} alt="icon" />
           Кухні
@@ -56,7 +60,7 @@ const mapStatetoProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  menuActivs: ActiveMenu
+  exitMenu: ExitMenu
 }
 
 

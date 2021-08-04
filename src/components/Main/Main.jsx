@@ -7,6 +7,8 @@ import Slide from './slide';
 import SwiperCore, { Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import 'swiper/swiper.scss';
 
@@ -81,8 +83,12 @@ class Main extends Component {
                 })
               }
 
-              <div className="promo-arrows promo-button-prev" ref={this.navigationPrevRef}/>
-              <div className="promo-arrows promo-button-next" ref={this.navigationNextRef}/>
+              <div className="promo-arrows promo-button-prev" ref={this.navigationPrevRef}>
+                <ArrowBackIosIcon style={{fontSize: "14px"}} />
+              </div>
+              <div className="promo-arrows promo-button-next" ref={this.navigationNextRef}>
+                <ArrowForwardIosIcon style={{fontSize: "14px"}} />
+              </div>
             </Swiper>
           </div>
         </Container>

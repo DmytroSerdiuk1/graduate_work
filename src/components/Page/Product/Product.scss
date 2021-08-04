@@ -1,0 +1,55 @@
+.product {
+    &-name {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        color: #414141;
+    }
+
+    &-tag {
+        font-size: 14px;
+        line-height: 16px;
+        color: #686868;
+    }
+
+    &-price {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        color: #414141;
+    }
+
+    &-button {
+        padding: 12px 50px;
+        background: #245462;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF
+    }
+
+    &-addwishlist {
+        p {
+            font-size: 12px;
+            line-height: 14px;
+            color: #414141
+        }
+    }
+
+    &-description-wrapper {
+        h6 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #414141;
+        }
+    }
+
+    &-description {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        color: #686868;
+    }
+}

@@ -1,6 +1,6 @@
 const config = {
     siteName: "Loft",
-    serverApi: "https://8e2593d93149.ngrok.io/"
+    serverApi: "https://eeceaed9cb8f.ngrok.io/"
 }
 
 export default config

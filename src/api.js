@@ -12,7 +12,7 @@ export default class RestoApi {
             })
             .then((data) => {
                 return data
-            });
+            })
     }
 
     async getCards() {

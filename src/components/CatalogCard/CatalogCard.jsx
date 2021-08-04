@@ -3,7 +3,8 @@ import "./CatalogCard.scss"
 
 import { Link } from "react-router-dom";
 
-import wishlist from '../../img/wishlist-icon.png';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import stockicon from '../../img/stock.png';
 
 import { addToCart, addToWishList } from '../../actions';
@@ -20,8 +21,10 @@ class CatalogCard extends Component {
   }
 
   render() {
-    const {name, price, stock, weight, img} = this.props.data;
+    const {name, price, stock, weight, img, wishlist, tags} = this.props.data;
     const {id, AddToWishList, AddToCart, col = 3} = this.props;
+
+    const wishlistColor = wishlist ? <FavoriteIcon style={{color: "red"}}/> : <FavoriteBorderIcon style={{color: "#414141"}}/>;
 
     const renderStock = stock ? (
     <div className="catalog-card-stock d-flex align-items-center">
@@ -33,12 +36,12 @@ class CatalogCard extends Component {
       <div className={`catalog-card d-flex align-items-center flex-column col-sm-6 col-md-4 col-xl-${col}`}>
         {renderStock}
         <button onClick={() => AddToWishList(id)} className='catalog-card-wishlist'>
-          <img src={wishlist} alt="Add to wishlist" />
+          {wishlistColor}
         </button>
         <img className="catalog-card-photo" src={img} alt="" />
         <div className="card-text w-100">
           <Link to={`/catalog/product/${id}`} className="catalog-card-title">{name}</Link>
-          <p className="catalog-card-tag">Барні стільція</p>
+          <p className="catalog-card-tag">{tags[0]}</p>
           <div className="catalog-card-price">{Math.floor(price - price * stock / 100)} ₽</div>
         </div>
         <div className="catalog-card-hover w-100">
@@ -61,7 +64,7 @@ class CatalogCard extends Component {
               </div>
             </div>
           </div>
-          <button onClick={() => AddToCart(this.props.data)} className="catalog-card-button">Добити в корзину</button>
+          <button onClick={() => AddToCart(this.props.data)} className="catalog-card-button">Добавити в корзину</button>
         </div>
       </div>
     );
