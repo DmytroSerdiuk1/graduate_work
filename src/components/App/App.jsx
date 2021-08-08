@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -16,21 +16,33 @@ import Register from '../Page/Register/Register';
 import Wishlist from '../Page/Wishlist/Wishlist';
 import WichRestoContext from '../WichRestoContext';
 import { connect } from 'react-redux';
-import {catalogLoad} from "../../actions"
+import {catalogLoad, catalogFetchError} from "../../actions"
 
 
-const App = ({catalogLoad, RestoService, load}) => {
+const App = ({catalogLoad, RestoService, catalogFetchError, load}) => {
     
+    const [error, setError] = useState(false);
+    const [loades, setLoad] = useState(load);
+
     useEffect(() => {
         async function fetchData () {
-            const value = await RestoService.getCards();
-            catalogLoad(value)
+            await RestoService.getCards().then(res => {
+                catalogLoad(res)
+                setLoad(false)
+            }).catch(res => {
+                setError(true)
+                setLoad(false)
+            });
         }
         fetchData();
     }, [RestoService, catalogLoad]);
 
-    if(load){
-        return <div>loaded...</div>
+    if(loades){
+        return <div>Load....</div>
+    }
+
+    if(error){
+        return <div>ERROR</div>
     }
 
     return (
@@ -53,7 +65,8 @@ const App = ({catalogLoad, RestoService, load}) => {
 }
 
 const mapDispatchToProps = {
-    catalogLoad
+    catalogLoad,
+    catalogFetchError
 }
 const mapStateToProps = (state) => {
     return {

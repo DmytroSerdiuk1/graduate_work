@@ -45,10 +45,10 @@ class Product extends Component {
       <div className="product">
         <Container>
           <div className="product-about row">
-            <div className="product-about__left col-7">
+            <div className="product-about__left col-12 mt-lg-0 mt-2 col-lg-7">
               <ProductSlider data={this.state.productData.img}/>
             </div>
-            <div className="product-about__right col-5">
+            <div className="product-about__right col-12 mt-lg-0 mt-2 col-lg-5">
               <div className="product-about__star-wrapper mb-2">
                 <button>
                   <StarIcon/>

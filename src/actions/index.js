@@ -37,4 +37,6 @@ const catalogLoad = (catalog) => {
     }
 }
 
-export {ActiveMenu, ExitMenu, addToCart, addToWishList, removeFromCart, catalogLoad}
+const catalogFetchError = () => ({type: "CATALOG_FETCH_ERROR"})
+
+export {ActiveMenu, ExitMenu, addToCart, addToWishList, removeFromCart, catalogLoad, catalogFetchError}

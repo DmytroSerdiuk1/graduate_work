@@ -1,6 +1,6 @@
 const config = {
     siteName: "Loft",
-    serverApi: "https://eeceaed9cb8f.ngrok.io/"
+    serverApi: "http://localhost:3000/"
 }
 
 export default config

@@ -12,7 +12,9 @@ export default class RestoApi {
             })
             .then((data) => {
                 return data
-            })
+            }).catch(
+                console.log("error")
+            )
     }
 
     async getCards() {

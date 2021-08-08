@@ -47,7 +47,7 @@ const ProductSlider = ({data}) => {
         }
       </Swiper>
       <Swiper
-        className="slider-nav"
+        className="slider-nav d-none d-lg-block"
         spaceBetween={10} 
         slidesPerView={5}
         grabCursor={true}
