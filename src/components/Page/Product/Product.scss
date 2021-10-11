@@ -52,4 +52,11 @@
         line-height: 18px;
         color: #686868;
     }
+
+    &-about {
+        &__star {
+            width: 15px;
+            height: 15px;
+        }
+    }
 }

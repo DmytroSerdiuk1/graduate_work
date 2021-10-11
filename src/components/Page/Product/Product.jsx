@@ -39,7 +39,6 @@ class Product extends Component {
       )
     }
 
-    
     const wishlistColor = this.state.productData.wishlist ? <FavoriteIcon style={{color: "red"}}/> : <FavoriteBorderIcon style={{color: "#414141"}}/>;
     return (
       <div className="product">
@@ -50,20 +49,20 @@ class Product extends Component {
             </div>
             <div className="product-about__right col-12 mt-lg-0 mt-2 col-lg-5">
               <div className="product-about__star-wrapper mb-2">
-                <button>
-                  <StarIcon/>
+                <button className="product-about__star-button">
+                  <StarIcon className="product-about__star"/>
                 </button>
-                <button>
-                  <StarIcon/>
+                <button className="product-about__star-button">
+                  <StarIcon className="product-about__star"/>
                 </button>
-                <button>
-                  <StarIcon/>
+                <button className="product-about__star-button">
+                  <StarIcon className="product-about__star"/>
                 </button>
-                <button>
-                  <StarIcon/>
+                <button className="product-about__star-button">
+                  <StarIcon className="product-about__star"/>
                 </button>
-                <button>
-                  <StarIcon/>
+                <button className="product-about__star-button">
+                  <StarIcon className="product-about__star"/>
                 </button>
               </div>
               <h3 className="product-name">{this.state.productData.name}</h3>

@@ -3,14 +3,13 @@ import {NavLink} from 'react-router-dom';
 import {Container} from 'react-bootstrap';
 
 import './Header.scss'
-
+import LocalMallIcon from '@material-ui/icons/LocalMall';
 import logo from '../../img/logo.png';
 
 import { ActiveMenu } from '../../actions';
 
-import wishlist from '../../img/wishlist-icon.png';
-import bag from '../../img/bag.png';
-import profile from '../../img/profile-icon.png';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import PersonIcon from '@material-ui/icons/Person';
 import menu from '../../img/menu-icon.png';
 import Navigation from "../Navigation";
 import { connect } from "react-redux";
@@ -39,14 +38,14 @@ class Header extends Component {
 
             <div className="link-icon d-flex">
               <NavLink exact className="header-link" to="/wishlist">
-                <img src={wishlist} alt="" />
-              </NavLink>
+                <FavoriteIcon style={{ fill: '#666' }}/>
+                </NavLink>
               <NavLink exact className="header-link" to="/bag">
-                <img src={bag} alt="" />
+                <LocalMallIcon style={{ fill: '#666' }}/>
                 {renderBagRound}
               </NavLink>
               <NavLink exact className="header-link" to="/profile">
-                <img src={profile} alt="" />
+                <PersonIcon style={{ fill: '#666' }}/>
               </NavLink>
             </div>
           </div>

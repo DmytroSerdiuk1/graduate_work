@@ -5,8 +5,6 @@ import BagCard from "../../BagCard";
 
 class Wishlist extends Component {
   render() {
-    console.log(this.props.catalog);
-
     return <Container>
       {
         this.props.wishlist.map((el) => {

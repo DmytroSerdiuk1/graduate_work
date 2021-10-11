@@ -8,6 +8,7 @@ import {Provider} from 'react-redux';
 import Error from './components/Error';
 import store from './store';
 import RestoApi from './api';
+import { BrowserRouter as Router} from "react-router-dom"
 
 const restoApi = new RestoApi();
 
@@ -16,7 +17,9 @@ ReactDOM.render(
     <Error>
       <RestoContext.Provider value={restoApi}>
         <Provider store={store}>
-          <App/>
+          <Router>
+            <App/>
+          </Router>
         </Provider>
       </RestoContext.Provider>
     </Error>

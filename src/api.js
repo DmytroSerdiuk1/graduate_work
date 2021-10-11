@@ -1,8 +1,8 @@
-import dsadsa from './config'
+import config from './config'
 
 export default class RestoApi {
     constructor(){
-        this.urlApi = dsadsa.serverApi;
+        this.urlApi = config.serverApi;
     }
 
     fechApi (url = '') {
@@ -10,11 +10,9 @@ export default class RestoApi {
             .then((response) => {
                 return response.json();
             })
-            .then((data) => {
-                return data
-            }).catch(
-                console.log("error")
-            )
+            .then((serverData) => {
+                return serverData.data
+            })
     }
 
     async getCards() {
