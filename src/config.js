@@ -1,6 +1,6 @@
 const config = {
     siteName: "Loft",
-    serverApi: "http://localhost:3001/"
+    serverApi: "https://loft-server-api.herokuapp.com/"
 }
 
 export default config
