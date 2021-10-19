@@ -8,6 +8,7 @@ const Home = () => {
         <Error>
             <Main/>
             <MainCatalog/>
+            {/* ?? */}
         </Error>
     )
 }
