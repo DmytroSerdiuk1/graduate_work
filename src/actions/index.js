@@ -30,6 +30,16 @@ const addToWishList = (id) => {
         productId: id
     }
 }
+
+const removeFromWishList = (id) => {
+    console.log(id);
+    return {
+        type: 'REMOVE_FROM_WISHLIST',
+        productId: id
+    }
+}
+
+
 const catalogLoad = (catalog) => {
     return {
         type: 'CATALOG_LOAD',
@@ -39,4 +49,4 @@ const catalogLoad = (catalog) => {
 
 const catalogFetchError = () => ({type: "CATALOG_FETCH_ERROR"})
 
-export {ActiveMenu, ExitMenu, addToCart, addToWishList, removeFromCart, catalogLoad, catalogFetchError}
+export {ActiveMenu, ExitMenu, addToCart, addToWishList, removeFromCart, catalogLoad, catalogFetchError, removeFromWishList}
