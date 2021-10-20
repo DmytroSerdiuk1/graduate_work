@@ -11,7 +11,7 @@ import ProductSlider from "../../ProductSlider/ProductSlider";
 import StarIcon from '@material-ui/icons/Star';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { connect } from "react-redux";
-import {addToWishList} from '../../../actions'
+import {toggleWichlist} from '../../../actions'
 
 class Product extends Component {
   state = {
@@ -89,7 +89,7 @@ class Product extends Component {
 
 const mapStateToProps = (state) => ({catalog: state.catalog})
 const mapDispatchToProps = {
-  addToWishList
+  toggleWichlist
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WichRestoContext()(Product));

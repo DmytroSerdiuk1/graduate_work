@@ -7,7 +7,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import stockicon from '../../img/stock.png';
 
-import { addToCart, addToWishList } from '../../actions';
+import { addToCart, toggleWichlist } from '../../actions';
 import { connect } from "react-redux";
 
 class CatalogCard extends Component {
@@ -79,7 +79,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   AddToCart: addToCart,
-  AddToWishList: addToWishList
+  AddToWishList: toggleWichlist
 }
 
 

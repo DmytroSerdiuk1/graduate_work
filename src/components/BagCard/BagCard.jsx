@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
-
 import remove from '../../img/remove.png';
-import {removeFromCart} from '../../actions';
 
 import './BagCard.scss';
 
@@ -43,7 +40,7 @@ class BagCard extends Component {
         <div>
         </div>
         <button onClick={()=> {
-          this.props.removeCart(this.props.id)
+          this.props.eventFunc(this.props.id)
         }} className="bag-card-delete">
           <img src={remove} alt="" />
         </button>
@@ -52,14 +49,4 @@ class BagCard extends Component {
   }
 }
 
-const mapStateToProps = ({bag}) => {
-  return {
-    bag: bag
-  }
-}
-
-const mapDispatchToProps = {
-  removeCart: removeFromCart
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(BagCard);
+export default BagCard;

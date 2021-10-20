@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Home from "../Page/Home"
 import Header from '../Header';
@@ -17,6 +17,8 @@ import Wishlist from '../Page/Wishlist/Wishlist';
 import WichRestoContext from '../WichRestoContext';
 import { connect } from 'react-redux';
 import {catalogLoad, catalogFetchError} from "../../actions"
+import Loader from '../Loader';
+import Error from '../Error/Error';
 
 
 
@@ -24,7 +26,6 @@ const App = ({catalogLoad, RestoService, catalogFetchError, load}) => {
     const [error, setError] = useState(false);
     const [loades, setLoad] = useState(true);
     const [apiError, setApiError] = useState(false)
-    const location = useLocation();
 
     useEffect(() => {
         async function fetchData () {
@@ -40,12 +41,8 @@ const App = ({catalogLoad, RestoService, catalogFetchError, load}) => {
         fetchData();
     }, [RestoService, catalogLoad]);
 
-    useEffect(()=>{
-        console.log(location);
-    }, [location])
-
     if(loades){
-        return <div>Load....</div>
+        return <Loader/>
     }
 
     if(apiError) {
@@ -55,7 +52,7 @@ const App = ({catalogLoad, RestoService, catalogFetchError, load}) => {
     }
 
     if(error){
-        return <div>ERROR {error}</div>
+        return <Error/>
     }
 
     return (

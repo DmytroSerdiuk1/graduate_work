@@ -2,6 +2,7 @@ const initialState = {
     menuActive: false,
     catalog: [],
     catalogLoad: true,
+    bagPrice: 0,
     bag: [],
     wishlist: []
 };
@@ -25,8 +26,10 @@ const reducer = (state = initialState, action) => {
                 menuActive: !state.menuActive
             }
         case 'ADD_TO_CART':
+            const price = state.bagPrice + action.payload.price
             return {
                 ...state,
+                bagPrice: price,
                 bag: [...state.bag, action.payload]
             }
         case 'TOGGLE_TO_WISHLIST':
@@ -52,9 +55,12 @@ const reducer = (state = initialState, action) => {
             const indx = state.bag.findIndex((val)=>{
                 return val._id === action.productId
             })
+            
+            const prevPrice = state.bagPrice - state.bag[indx].price
 
             return {
                 ...state,
+                bagPrice: prevPrice,
                 bag: [...state.bag.splice(0, indx), ...state.bag.slice(indx + 1)]
             }
         default:
